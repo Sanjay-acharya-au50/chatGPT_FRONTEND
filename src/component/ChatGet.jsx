@@ -35,25 +35,25 @@ const ChatGet = () => {
 
   return (
     <div className='fo text-bold w-[100vw] h-[100vh] flex flex-col justify-center items-center bg-[#ced6e0] ' >
-            <p className='shadow-xl w-[360px] md:w-[600px]  text-center bg-[#57606f] text-white p-3' >SAN GPT</p>
+            <p className='shadow-xl rounded-t-lg w-[360px] md:w-[600px]  text-center bg-[#57606f] text-white p-3' >SAN GPT</p>
 
-        <div className='h-[500px] w-[360px] md:w-[600px] shadow-xl bg-[#f1f2f6] flex flex-col justify-end items-center  overflow-hidden'>
+        <div className='h-[500px] rounded-b-lg w-[360px] md:w-[600px] shadow-xl bg-[#f1f2f6] flex flex-col justify-end items-center  overflow-hidden'>
             <div className='w-full'>
 
 
             {/* {outPut ? outPut : "Hi, I'm Sanjay. How can I assist you?"} */}
             
-            <div className='border  mx-6 py-2 '>
+            <div className='  mx-6 py-2 '>
             {
                 outPut && outPut.length > 0 ? outPut.map((itemes, i)=>{
                     return(
                         <div key={i} >
                         
-                            <div className=' mt-2 p-2  border bg-yellow-50'>{itemes}</div>
+                            <div className=' mt-2 p-2 shadow-lg bg-yellow-50'>{itemes}</div>
 
                         </div>
                     )
-                }) : "Hi, I'm Sanjay. How can I assist you?"
+                }) : (<p className='border shadow-xl p-2'>  Hi, I'm Sanjay. How can I assist you? </p>)
             }
             </div> 
 
@@ -62,10 +62,10 @@ const ChatGet = () => {
             </div>
 
             <form onSubmit={handleSubmit}>
-                <div className='flex m-5 '>
+                <div className='flex m-5 p-2'>
 
-                <input type='text' value={prompt} onChange={(e)=>setPrompt(e.target.value)} placeholder='enter' className='p-3 border border-[#57606f] w-[300px] md:w-[500px] '/>
-                <button className='text-2xl  pl-4 pr-4 py-3 bg-[#57606f]'><MdSend/></button>
+                <input type='text' value={prompt} onChange={(e)=>setPrompt(e.target.value)} placeholder='enter' className='rounded-l-lg p-3 border border-[#57606f]  w-[250px] md:w-[500px] '/>
+                <button className='text-2xl  pl-4 pr-4 py-3 bg-[#57606f] rounded-r-lg'><MdSend/></button>
                 </div>
             </form>
 
