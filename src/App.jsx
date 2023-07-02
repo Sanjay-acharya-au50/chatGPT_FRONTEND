@@ -4,7 +4,7 @@ import './App.css'
 import axios from 'axios'
 import ChatGet from './component/ChatGet';
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://sanjay-chatgpt-backend.onrender.com";
 axios.defaults.withCredentials = true;
 
 
